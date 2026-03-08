@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-gray-100 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-dark-card border border-dark-border rounded-3xl overflow-hidden;
+  }
+  
+  .glass-panel {
+    @apply bg-dark-card/60 border border-dark-border rounded-2xl;
+  }
+  
+  .pill-nav {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2;
+  }
+  .pill-nav-active {
+    @apply bg-white text-black;
+  }
+  .pill-nav-inactive {
+    @apply text-gray-400 hover:text-white hover:bg-white/5;
+  }
+}
+
+/* Hide number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
